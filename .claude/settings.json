@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find d:/aiResumeBuilder/frontend/src/modules/auth d:/aiResumeBuilder/frontend/src/app/\"\\(auth\\)\" -type f)",
+      "Bash(find /d/aiResumeBuilder/backend -name *migration* -o -name V[0-9]*__* -o -path */db/migration/*)",
+      "Bash(xargs grep:*)",
+      "Bash(find d:aiResumeBuilderfrontendsrc -type f -name *api*)"
+    ],
+    "additionalDirectories": [
+      "d:\\aiResumeBuilder"
+    ]
+  }
+}
