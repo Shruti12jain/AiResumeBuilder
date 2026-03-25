@@ -13,7 +13,7 @@ import { cn } from "@/utils/cn";
 import { useAuthStore, useUiStore } from "@/hooks/useStore";
 import { authService } from "@/services/authService";
 import { Button } from "@/components/ui/button";
-
+import { useRouter } from "next/navigation";
 // ─── Nav items ────────────────────────────────────────────────────────────────
 
 const NAV_ITEMS = [
@@ -26,8 +26,10 @@ export const Sidebar = observer(function Sidebar() {
   const pathname = usePathname();
   const authStore = useAuthStore();
   const uiStore = useUiStore();
+  const router=useRouter();
 
   async function handleLogout() {
+    router.push("/login")
     try {
       await authService.logout();
     } finally {
